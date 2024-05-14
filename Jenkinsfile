@@ -22,7 +22,7 @@ pipeline {
         }
         stage('Checkout from Git') {
             steps {
-                git branch: 'main', url: 
+                git branch: 'main', url: 'https://github.com/sgapea/Reddit-Clone_CI.git'
             }
         }
         stage("Sonarqube Analysis") {
@@ -93,7 +93,7 @@ pipeline {
                body: "Project: ${env.JOB_NAME}<br/>" +
                    "Build Number: ${env.BUILD_NUMBER}<br/>" +
                    "URL: ${env.BUILD_URL}<br/>",
-               to: 'ashfaque.s510@gmail.com',                              
+               to: 'sgapea@yahoo.com',                              
                attachmentsPattern: 'trivyfs.txt,trivyimage.txt'
         }
      }
